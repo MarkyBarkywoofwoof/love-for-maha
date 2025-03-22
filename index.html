@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Love for Maha</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ffdde1, #ee9ca7);
+      color: #fff;
+      font-family: 'Courier New', Courier, monospace;
+      text-align: center;
+      padding: 50px;
+    }
+
+    .heart {
+      font-size: 100px;
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    .message {
+      font-size: 24px;
+      margin-top: 20px;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      display: inline-block;
+      max-width: 600px;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #fff;
+      color: #ee9ca7;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    button:hover {
+      background-color: #ffe4e1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="heart">❤️</div>
+  <h1>To the One and Only, Maha</h1>
+
+  <div class="message" id="loveMessage">
+    Every heartbeat, every smile, every line of this code whispers one truth...  
+    <br><strong>I love you, Maha 💖</strong>
+  </div>
+
+  <button onclick="showMoreLove()">Click for more love</button>
+
+  <script>
+    function showMoreLove() {
+      const messages = [
+        "You're the sunshine in my syntax.",
+        "Even infinite loops can't express my love for you.",
+        "If I could code the perfect person, it'd still be you.",
+        "You're the only variable I never want to change.",
+        "My love for you compiles perfectly, every time."
+      ];
+      const loveMessage = document.getElementById("loveMessage");
+      const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+      loveMessage.innerHTML += "<br><br>" + randomMessage;
+    }
+  </script>
+
+</body>
+</html>
